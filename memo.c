@@ -8,9 +8,9 @@ int main()
 	FILE *fp;
 	char c[BUF_SIZE];
 	
-	printf("nyuuryokusiro");
+	printf("nyuuryokusiro\n");
 	scanf("%c",c);
-	printf("%s",c[0]);
+	printf("%c",c[0]);
 	/*fp = fopen("A.txt","r");
 	
 	if(fp == NULL)
