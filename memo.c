@@ -43,18 +43,18 @@ int main()
 		{
 			continue;
 		}
-		if(c == '+' || c == '-' || c == '=')
+		if(getType(c))       //if(c == '+' || c == '-' || c == '=')
 		{
 			putchar(c);
 			break;
 		}
-		else if(isdigit(c))
+		else if(getType(c))  //(isdigit(c))
 		{
 			do
 			{
 				putchar(c);
 			}
-			while((c = getchar()) != EOF && isdigit(c));
+			while((c = getchar()) != EOF && getType(c));  //isdigit(c));
 			break;
 		}
 		else
