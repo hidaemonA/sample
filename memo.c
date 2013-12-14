@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 
@@ -80,7 +80,56 @@ int main()
 	c = fgetc(fp);
 	printf("%c",c);
 	
-	fclose(fp);*/
+	fclose(fp);
+	
+	return 0;
+}*/
+
+
+//“ü—Í‚Í•W€“ü—Í
+//‚Ç‚ÌêŠ‚É‚Í‚Ç‚Ìtoktype‚ª‚ ‚é‚©H
+
+#include <stdio.h>
+#include <ctype.h>
+
+enum tokType
+{
+	OpPlus,OpMinus,OpEqual,
+	Number,
+	EndOfFile
+};
+
+static enum tokType gettok(char *buf, int bufsize)
+{
+	//‚±‚±‚ğ‘‚­
+	int c;
+	
+	while((c = getchar()) != EOF)
+	{
+		if(c == '+')
+		{
+			
+			return OpPlus;
+		}
+		else if(c == '-')
+		{
+			return OpMinus;
+		}
+		else
+		{
+			return EndOfFile;
+		}
+	}
+}
+int main()
+{
+	enum tokType tok;
+	char buf[100];
+	
+	while((tok = gettok(buf, sizeof(buf))) != EndOfFile)
+	{
+		printf("tok = %d; buf = %s\n", tok, buf);
+	}
 	
 	return 0;
 }
