@@ -4,10 +4,8 @@ int main()
 {
 	int c;
 	
-	while((c = gets()) != EOF){
-		if(c == " " || c == "	" || c == "\n")
-		{
-		}
+	while((c = getchar()) != EOF){
+		printf("%s",c);
 	}
 	return 0;
 }
