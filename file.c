@@ -1,11 +1,16 @@
 #include<stdio.h>
 
-int main()
-{
+int main(){
+
 	int c;
 	
 	while((c = getchar()) != EOF){
-		printf("%c",c);
+		if(c == ' ' || c == '	' || c == '\n'){
+			break;
+		}
+		else{
+			printf("%c",c);
+		}
 	}
 	return 0;
 }
