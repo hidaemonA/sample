@@ -5,7 +5,7 @@ int main()
 	int c;
 	
 	while((c = getchar()) != EOF){
-		printf("%s",c);
+		printf("%c",c);
 	}
 	return 0;
 }
